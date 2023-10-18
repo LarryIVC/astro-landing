@@ -1,10 +1,9 @@
 ---
 import Logo from "./Logo.astro";
-
 ---
 
 <header
-id="landing-header"
+  id="landing-header"
   class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 transition-colors duration-300"
 >
   <div class="flex flex-grow basis-0">
@@ -30,27 +29,56 @@ id="landing-header"
       <li><a href="#">Menu</a></li>
     </ul>
   </nav>
+  <div
+    id="menu-backdrop"
+    class="absolute bg-black/10 backdrop-blur-lg rounded
+    left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)]
+    transition-all duration-300 delay-75 ease-in-out -z-10"
+  >
+  </div>
 </header>
+
+<script>
+  const listItem = document.querySelectorAll("#landing-header li");
+  const menuBackdrop = document.getElementById("menu-backdrop");
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+      menuBackdrop.style.setProperty("--left", `${left}px`);
+      menuBackdrop.style.setProperty("--top", `${top}px`);
+      menuBackdrop.style.setProperty("--width", `${width}px`);
+      menuBackdrop.style.setProperty("--height", `${height}px`);
+      // menuBackdrop.style.setProperty("--opacity", `1!important`)
+      menuBackdrop.style.setProperty("visibility", `visible`);
+    });
+
+    item.addEventListener("mouseleave", () => {
+      // menuBackdrop.style.setProperty("--opacity", `0`)
+      menuBackdrop.style.setProperty("visibility", `hidden`);
+    });
+  });
+</script>
 
 <script>
   const $header = document.getElementById("landing-header");
   const observerOptions = {
     root: null,
     rootMargin: "0px", // cuanto se ve el elemento antes de que se active
-    threshold: 0.90, // cuando se activa
+    threshold: 0.9, // cuando se activa
   };
-  
-  const observer = new IntersectionObserver((entries => {
-    entries.forEach(entry => {
-      const { isIntersecting } = entry
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { isIntersecting } = entry;
       if (isIntersecting) {
-        const color = entry.target.getAttribute("data-header-color")
-        $header.style.color = color
+        const color = entry.target.getAttribute("data-header-color");
+        $header.style.color = color;
+        // $header.style.borderColor = color;
       }
-  })
-  }), observerOptions)
+    });
+  }, observerOptions);
 
-  const $sections = document.querySelectorAll(".landing-section")
-  $sections.forEach(section => observer.observe(section))
-
+  const $sections = document.querySelectorAll(".landing-section");
+  $sections.forEach((section) => observer.observe(section));
 </script>
