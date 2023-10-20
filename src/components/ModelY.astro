@@ -1,37 +1,28 @@
-<section
-  class="bg-black h-screen w-screen text-center relative overflow-hidden landing-section text-black"
-  data-header-color="#131313"
+---
+import SectionReusable from "./SectionReusable.astro";
+---
+
+<SectionReusable
+  title="Model Y"
+  subtitle="Concertar una prueba de conducción"
+  color="black"
 >
-  <div class="flex flex-col h-full z-30 relative">
-    <header>
-      <h2 class="text-current pt-32 text-[40px] font-medium">
-        Model Y
-      </h2>
-      <p class="text-current text-base underline">
-        Concertar una prueba de conducción
-      </p>
-    </header>
-
-    <footer class="pb-20 flex flex-grow flex-col justify-end">
-      <div class="flex gap-4 justify-center">
-        <a
-          class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
-          href="#">Explorar inventario</a
-        >
-        <a
-          class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
-          href="#">Pedido personalizado</a
-        >
-      </div>
-    </footer>
+  <div slot="footer" class="flex gap-4 justify-center">
+    <a
+      class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
+      href="#">Explorar inventario</a
+    >
+    <a
+      class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
+      href="#">Pedido personalizado</a
+    >
   </div>
 
-  <div class="absolute top-0 bottom-0 h-full w-full">
-    <img
-      class="object-cover h-full w-full object-center"
-      src="/model-y.avif"
-      alt="Model Y"
-      loading="lazy"
-    />
-  </div>
-</section>
+  <img
+    slot="background"
+    class="object-cover h-full w-full object-center"
+    src="/model-y.avif"
+    alt="Model Y"
+    loading="lazy"
+  />
+</SectionReusable>

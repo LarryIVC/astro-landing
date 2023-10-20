@@ -1,33 +1,26 @@
-<section
-  class="bg-black h-screen w-screen text-center relative overflow-hidden landing-section"
-  data-header-color="white"
+---
+import SectionReusable from "./SectionReusable.astro";
+---
+
+<SectionReusable
+  title="Disfrute de Tesla"
+  subtitle="Programe una prueba de conducción hoy mismo"
+  color="white"
 >
-  <div class="flex flex-col h-full z-30 relative">
-    <header>
-      <h2 class="text-white pt-32 text-[40px] font-medium">
-        Disfrute de Tesla
-      </h2>
-      <p class="text-white text-sm">
-        Programe una prueba de conducción hoy mismo
-      </p>
-    </header>
-
-    <footer class="text-white pb-20 flex flex-grow flex-col justify-end">
-      <div>
-        <a
-          class="border-2 text-sm rounded font-medium px-12 py-2 border-white bg-white/5 backdrop-blur-xl hover:bg-white hover:text-black transition-colors"
-          href="#">Prueba de conducción</a
-        >
-      </div>
-    </footer>
+  <div slot="footer">
+    <a
+      class="border-2 text-sm rounded font-medium px-12 py-2 border-white bg-white/5 backdrop-blur-xl hover:bg-white hover:text-black transition-colors"
+      href="#">Prueba de conducción</a
+    >
   </div>
 
-  <div class="absolute top-0 bottom-0 h-full w-full">
-    <video
-      class="object-cover h-full w-full"
-      src="/video-home.mp4"
-      autoplay
-      muted
-      loop></video>
-  </div>
-</section>
+  <video
+    slot="background"
+    class="object-cover h-full w-full"
+    src="/video-home.mp4"
+    autoplay
+    muted
+    loop
+  >
+  </video>
+</SectionReusable>
