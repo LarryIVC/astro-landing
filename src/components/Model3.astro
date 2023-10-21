@@ -3,26 +3,35 @@ import SectionReusable from "./SectionReusable.astro";
 ---
 
 <SectionReusable
-  title="Model Y"
-  subtitle="Concertar una prueba de conducción"
-  color="black"
+  title="Model 3"
+  subtitle="Lease starting at $329/mo*"
+  color="white"
 >
-  <div slot="footer" class="flex gap-4 justify-center">
+<div slot="footer" class="flex gap-4 justify-center flex-col">
+  <div class="flex gap-4 justify-center">
     <a
       class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
-      href="#">Explorar inventario</a
+      href="#">Order Now</a
     >
     <a
       class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
-      href="#">Pedido personalizado</a
+      href="#">Demo Drive</a
     >
   </div>
+  <p class="text-xs">
+    *Excludes taxes and fees with price subject to change. Available in select
+    states. <a
+      class="underline hover:underline-offset-2 hover:decoration-2 transition"
+      href="#">See Details</a
+    >
+  </p>
+</div>
 
   <img
     slot="background"
     class="object-cover h-full w-full object-center"
-    src="/model-y.avif"
-    alt="Model Y"
+    src="/model-3.avif"
+    alt="Model 3"
     loading="lazy"
   />
 </SectionReusable>
