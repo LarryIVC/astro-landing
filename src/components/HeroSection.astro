@@ -3,15 +3,28 @@ import SectionReusable from "./SectionReusable.astro";
 ---
 
 <SectionReusable
-  title="Disfrute de Tesla"
-  subtitle="Programe una prueba de conducción hoy mismo"
+  title="Model Y"
+  subtitle="Lease starting at $399/mo*"
   color="white"
 >
-  <div slot="footer">
-    <a
-      class="border-2 text-sm rounded font-medium px-12 py-2 border-white bg-white/5 backdrop-blur-xl hover:bg-white hover:text-black transition-colors"
-      href="#">Prueba de conducción</a
-    >
+  <div slot="footer" class="flex gap-4 justify-center flex-col">
+    <div class="flex gap-4 justify-center">
+      <a
+        class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
+        href="#">Order Now</a
+      >
+      <a
+        class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
+        href="#">Demo Drive</a
+      >
+    </div>
+    <p class="text-xs">
+      *Excludes taxes and fees with price subject to change. Available in select
+      states. <a
+        class="underline hover:underline-offset-2 hover:decoration-2 transition"
+        href="#">See Details</a
+      >
+    </p>
   </div>
 
   <video

@@ -1,5 +1,8 @@
 ---
+import Help from "./Help.astro";
 import Logo from "./Logo.astro";
+import Globe from "./Globe.astro";
+import Person from "./Person.astro";
 ---
 
 <header
@@ -12,21 +15,19 @@ import Logo from "./Logo.astro";
 
   <nav>
     <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-      <li><a href="#">Model S</a></li>
-      <li><a href="#">Model 3</a></li>
-      <li><a href="#">Model X</a></li>
-      <li><a href="#">Model Y</a></li>
-      <li><a href="#">Powerall</a></li>
-      <li><a href="#">Carga</a></li>
+      <li><a href="#">Vehicles</a></li>
+      <li><a href="#">Energy</a></li>
+      <li><a href="#">Charging</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">Shop</a></li>
     </ul>
   </nav>
 
   <nav class="flex flex-grow basis-0 justify-end">
-    <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-      <li><a href="#">Soporte</a></li>
-      <li><a href="#">Tienda</a></li>
-      <li><a href="#">Cuenta</a></li>
-      <li><a href="#">Menu</a></li>
+    <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-1 [&>li>a]:py-1">
+      <li><a href="#"><Help /></a></li>
+      <li><a href="#"><Globe /></a></li>
+      <li><a href="#"><Person /></a></li>
     </ul>
   </nav>
   <div
