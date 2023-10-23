@@ -1,0 +1,28 @@
+---
+import SectionReusable from "./SectionReusable.astro";
+---
+
+<SectionReusable
+  title="Experience Tesla"
+  subtitle="Schedule a Demo Drive Today"
+  color="white"
+>
+  <div slot="footer" class="flex gap-4 justify-center flex-col">
+    <div class="flex gap-4 justify-center">
+      <a
+        class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
+        href="#">Demo Drive</a
+      >
+    </div>    
+  </div>
+
+  <video
+    slot="background"
+    class="object-cover h-full w-full"
+    src="/experiencia.webm"
+    autoplay
+    muted
+    loop
+  >
+  </video>
+</SectionReusable>

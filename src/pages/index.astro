@@ -3,6 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import LandingHeader from "../components/LandingHeader.astro";
 import HeroSection from "../components/HeroSection.astro";
 import Model3 from "../components/Model3.astro";
+import ModelX from "../components/Model-X.astro";
+import ModelS from "../components/Model-S.astro";
+import Experiencia from "../components/Experiencia.astro";
+import Panels from "../components/Panels.astro";
 ---
 
 <Layout title="Tesla el coche de tus sueños (y de Elon Musk)">
@@ -15,16 +19,16 @@ import Model3 from "../components/Model3.astro";
       <Model3 />
     </div>
     <div class="snap-center">
-      <HeroSection />
+      <ModelX />
     </div>
     <div class="snap-center">
-      <Model3 />
+      <ModelS />
     </div>
     <div class="snap-center">
-      <HeroSection />
+      <Experiencia />
     </div>
     <div class="snap-center">
-      <Model3 />
-    </div>    
+      <Panels />
+    </div>
   </main>
 </Layout>

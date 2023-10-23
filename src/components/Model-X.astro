@@ -1,0 +1,39 @@
+---
+import SectionReusable from "./SectionReusable.astro";
+---
+
+<SectionReusable
+  title="Model X"
+  subtitle="From $68,590* After Federal Tax Credit & Est."
+  secondSubtitle="Gas Savings"
+  color="black"
+>
+  <div slot="footer" class="flex gap-4 justify-center flex-col">
+    <div class="flex gap-4 justify-center">
+      <a
+        class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
+        href="#">Order Now</a
+      >
+      <a
+        class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
+        href="#">Demo Drive</a
+      >
+    </div>
+    <p class="text-xs">
+      *Price before incentives and savings is $79,990, excluding taxes and fees.
+      Subject to change.
+    </p>
+    <a
+      class="text-xs underline hover:underline-offset-2 hover:decoration-2 transition"
+      href="#">Learn about est. gas savings.</a
+    >
+  </div>
+
+  <img
+    slot="background"
+    class="object-cover h-full w-full object-center"
+    src="/Model-X.avif"
+    alt="Model X"
+    loading="lazy"
+  />
+</SectionReusable>
