@@ -1,0 +1,60 @@
+---
+import SectionReusable from "./SectionReusable.astro";
+---
+
+<SectionReusable title="Accessories" color="black/5">
+  <div slot="footer" class="flex gap-4 justify-center flex-col">
+    <div class="flex gap-4 justify-center">
+      <a
+        class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
+        href="#">Shop Now</a
+      >
+    </div>
+    <div>
+      <ul class="flex place-content-center gap-3 text-xs text-gray-300">
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">Tesla © 2023</a>
+        </li>
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">Privacy & Legal</a>
+        </li>
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">Vehicle Recalls</a>
+        </li>
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">Contact</a>
+        </li>
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">News</a>
+        </li>
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">Get Updates</a>
+        </li>
+        <li>
+          <a
+            class="hover:underline hover:underline-offset-2 hover:decoration-2 transition"
+            href="#">Locations</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    slot="background"
+    class="object-cover h-full w-full object-center"
+    src="/Accessories.avif"
+    alt="Accessories"
+    loading="lazy"
+  />
+</SectionReusable>
