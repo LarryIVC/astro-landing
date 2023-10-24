@@ -1,0 +1,30 @@
+---
+import SectionReusable from "./SectionReusable.astro";
+---
+
+<SectionReusable
+  title="Solar Roof"
+  subtitle="Produce Clean Energy From Your Roof"
+  color="black/5"
+>
+  <div slot="footer" class="flex gap-4 justify-center flex-col">
+    <div class="flex gap-4 justify-center">
+      <a
+        class="text-white text-sm rounded border-2 border-white/80 font-medium px-12 py-2 bg-gray-800/50 backdrop-blur-xl hover:bg-white hover:text-black hover:border-white transition-colors"
+        href="#">Order Now</a
+      >
+      <a
+        class="text-black border-2 text-sm rounded font-medium px-12 py-2 border-gray-800/50 bg-white/90 backdrop-blur-sm hover:bg-gray-800/50 hover:text-white transition-colors"
+        href="#">Learn More</a
+      >
+    </div>
+  </div>
+
+  <img
+    slot="background"
+    class="object-cover h-full w-full object-center"
+    src="/SolarRoof.avif"
+    alt="Solar Roof"
+    loading="lazy"
+  />
+</SectionReusable>
